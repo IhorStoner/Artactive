@@ -1,0 +1,39 @@
+.copyright {
+    padding: 20px 0;
+    background-color: #65269d;
+
+    &-content {
+        display: flex;
+        justify-content: space-between;
+
+        &__item {
+            @include content-text;
+            color: #fff;
+            font-size: $main-font-size - 1px;
+
+            &:nth-child(2) {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+@media (max-width:320px) {
+    .copyright {
+        padding: 50px;
+
+        &-content {
+            height: 65px;
+            max-width: 100%;
+            flex-direction: column-reverse;
+
+            &__item {
+                font-size: 12px;
+
+                &:nth-child(3) {
+                    display: none;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,149 @@
+.operational-printing {
+    background-image: url(../../img/printing3.png);
+    background-repeat: no-repeat;
+    background-position: 80%;
+    background-position-y: 0;
+    padding: 140px 0 150px 0;
+    position: relative;
+    background-color: #faf8fb;
+}
+
+
+.printing-content {
+    max-width: 550px;
+    position: relative;
+
+    // &::after {
+    //     content: "";
+    //     background-image: url(../../img/point.png);
+    //     display: block;
+    //     width: 500px;
+    //     height: 278px;
+    //     position: absolute;
+    //     bottom: -20px;
+    //     left: 765px;
+    // }
+
+    // &::before {
+    //     content: "";
+    //     background-image: url(../../img/airplane.png);
+    //     display: block;
+    //     width: 50px;
+    //     height: 55px;
+    //     position: absolute;
+    //     bottom: 255px;
+    //     right: -715px;
+    // }
+    
+    & .form-text {
+        @include form-text;
+    }
+
+    & .form-send {
+        width: 750px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        position: relative;
+        @include form-data;
+    }
+
+    &__title {
+        @include content-title;
+        margin-bottom: 55px;
+        max-width: 490px;
+        position: relative;
+
+        &::before {
+            @include number-title;
+            content: "3";
+            left: -85px;
+        }
+    }
+
+    &__text {
+        @include content-text;
+        margin-bottom: 30px;
+        &:last-child {
+            margin-bottom: 60px;
+        }
+    }
+
+    &__btn {
+        @include button;
+    }
+}
+
+@media (max-width: 750px) {
+    .operational-printing {
+        padding: 110px 0 120px 0;
+        background-image: url(../../img/bg-style750px.png);
+        background-position: right bottom;
+    }
+
+    .printing-content {
+        max-width: 100%;
+
+        &::after {
+            display: none;
+        }
+
+        &::before {
+            display: none;
+        }
+
+        & .form-text {
+            max-width: 204px;
+            margin-bottom: 35px;
+        }
+
+        & .form-send {
+            display: block;
+            height: 170px;
+
+            &__data {
+                display: block;
+                margin-bottom: 35px;
+            }
+
+            &__btn {
+                 display: block;
+            }
+        }
+    }
+}
+
+@media (max-width: 750px) {
+    .operational-printing {
+        padding: 70px 0 60px 0;
+        background-image: url(../../img/bg-print320px.png);
+        background-position-y: 70%;
+
+        & .printing-content {
+
+            &__title {
+                font-size: 24px;    
+            }
+
+            &__text {
+                font-size: 14px;
+            }
+
+            & .form-text {
+                margin-top: 320px;
+            }
+
+            & .form-send {
+                width: 100%;
+
+                &__data {
+                    width: 100%;
+                }
+
+                &__btn {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

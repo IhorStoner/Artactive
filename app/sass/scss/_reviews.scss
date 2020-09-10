@@ -1,0 +1,135 @@
+.reviews {
+    padding: 135px 0 65px 0;
+}
+
+.reviews-header {
+    @include section-header;
+    margin-bottom: 85px;
+}
+
+.reviews-slider {
+    position: relative;
+
+    .reviews-slider__btn {
+        margin-left: 14%;
+        margin-top: 40px;
+
+        & .reviews-btn {
+            @include slider-btn;
+        }
+    }
+
+    .prev-slider__item {
+        position: absolute;
+        top: 0;
+        left: -750px;
+        background: linear-gradient(to right, transparent 70%);
+        background-color: transparent;
+        z-index: 100;
+    }
+
+    .next-slider__item {
+        position: absolute;
+        right: -750px;
+        top: 0;
+        background: linear-gradient(to right, #fff 70%, transparent 70%);
+    }
+
+    &__item {
+        padding: 60px 85px 55px 75px;
+        max-width: 845px;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        justify-content: space-between;
+        box-shadow: 0 0 10px rgba(81, 8, 86, 0.08);
+        border-radius: 10px;
+        position: relative;
+
+        & .prev-slide {
+            position: absolute;
+            left: 0;
+        }
+
+        & .next-slide {
+            position: absolute;
+            right: 0;
+        }
+
+        & .reviews-text {
+            @include content-text;
+            max-width: 510px;
+            margin-bottom: 20px;
+        }
+
+        & .person-link {
+            color: #3594dd;
+            font-family: $main-font-family;
+            font-size: $main-font-size;
+            font-weight: 600;
+            line-height: 30.1px;
+        }
+
+        & .person-name {
+            @include content-title;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .reviews-slider {
+        max-width: 600px;
+
+        &__item {
+            padding: 60px 20px;
+            display: block;
+            max-width: 288px;
+            margin: 0 auto;
+
+            & .img-block {
+                display: block;
+                max-width: 136px;
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: 48px;
+            }
+        }
+    }
+}
+
+@media (max-width: 750px) {
+    .slider-content {
+        margin-left: 30px;
+    }
+    
+    .reviews-slider__btn {
+        margin-left: 0;
+        }
+}
+
+@media (max-width: 320px) {
+    .reviews {
+        padding: 30px 0 60px 0;
+    }
+
+    .reviews-slider {
+        max-width: 320px;
+
+        &__item {
+            padding: 60px 20px;
+            display: block;
+            max-width: 288px;
+            margin: 0 auto;
+
+            & .img-block {
+                display: block;
+                max-width: 136px;
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: 48px;
+            }
+        }
+    }
+}

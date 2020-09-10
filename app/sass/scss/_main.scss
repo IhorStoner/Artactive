@@ -1,0 +1,36 @@
+$wrapper-width: 1160px;
+$main-font-family: 'Open Sans';
+$main-font-size: 14px;
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+.wrapper {
+  max-width: $wrapper-width;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+ul{
+  padding: 0;
+  margin: 0;
+
+  li {
+    list-style-type: none;
+  }
+}
+
+h1,h2,h3 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}

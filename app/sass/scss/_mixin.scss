@@ -1,0 +1,151 @@
+@mixin form-data {
+    &__data {
+        color: #868995;
+        font-family: $main-font-family;
+        font-size: $main-font-size;
+        line-height: 24px;
+        padding-bottom: 10px;
+        background-color: transparent;
+        padding-left: 15px;
+        outline: none;
+        border: none;
+        border-bottom: 1px solid #ccc;
+    }
+
+    &__btn {
+        @include button;
+    }
+}
+
+@mixin form-text {
+    color: #383d52;
+    font-family: $main-font-family;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 30.1px;
+    &__item {
+        display: block;
+        font-size: 16px;
+        font-weight: normal;
+        font-style: italic;
+        margin-bottom: 12px;
+    }
+}
+
+@mixin section-header {
+    color: #7f38bd;
+    font-family: $main-font-family;
+    font-size: 30px;
+    font-weight: bold;
+  }
+  
+  @mixin content-title {
+    color: #383d52;
+    font-family: $main-font-family;
+    font-size: 32px;
+    font-weight: 600;
+    position: relative;
+    z-index: 10;
+  }
+  
+  @mixin content-text {
+    color: #5e606a;
+    font-family: $main-font-family;
+    font-size: $main-font-size;
+    font-weight: 400;
+    line-height: 24px;
+  }
+  
+  @mixin number-title {
+    content: "1";
+    text-shadow: 0 0 21px rgba(81, 8, 86, 0.08);
+    color: #faf8fb;
+    font-family: "Muller Heavy", $main-font-family;
+    font-size: 200px;
+    font-weight: bolder;
+    position: absolute;
+    top: -80px;
+    left: -85px;
+    z-index: -1;
+  }
+  
+  @mixin button {
+    border-radius: 24px;
+    background-color: #fb0275;
+    color: #fff;
+    border: none;
+    outline: none;
+    padding: 15px 45px;
+    font-family: $main-font-family;
+    font-size: $main-font-size + 2px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.57px;
+    cursor: pointer;
+  
+    &:hover {
+      background-color: rgba(251,2,117, 0.9);
+    }
+  }
+  
+  @mixin section-element {
+    content: "";
+    width: 11px;
+    height: 130px;
+    background-image: url(../../img/element.png);
+    position: absolute;
+    bottom: -220px;
+    left: 50%;
+    z-index: 10;
+  }
+  
+  @mixin slider-btn {
+    width: 100px;
+    height: 20px;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+  
+    &__prev {
+      background-image: url(../../img/btn-prev.png);
+    }
+  
+    &__next {
+      background-image: url(../../img/btn-next.png);
+    }
+  }
+
+@mixin order-form {
+    & {
+        max-height: 117px;
+        box-shadow: 0 23px 32px rgba(81, 8, 86, 0.33);
+        border-radius: 10px;
+        background-color: #883eca;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 40px 38px;
+
+        &__btn {
+            @include button;
+            padding: 17px 40px;
+        }
+
+        &__text {
+            width: 215px;
+            color: #fff;
+            font-family: $main-font-family;
+            font-size: $main-font-size + 2px;
+            font-weight: 600;
+
+            &__item {
+            font-size: $main-font-size - 1px;
+            line-height: 24px;
+            display: block;
+            }
+        }
+    } 
+}
